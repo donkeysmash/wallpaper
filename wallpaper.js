@@ -3,7 +3,8 @@ import request from 'request';
 // TODO grab them from a config
 const API_KEY = process.env.PIXABAY_API_KEY || '5394529-2a907f9e189a17b2c4ac0e2ab';
 const API_URL = process.env.API_URL || 'https://pixabay.com/api';
-const API_TIMEOUT = 500;
+const API_TIMEOUT = 5000;
+// example https://pixabay.com/api/?key=5394529-2a907f9e189a17b2c4ac0e2ab
 
 export function fetchSrcUrl() {
   let reqOptions = {
