@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import Debug from 'debug';
 import express from 'express';
+import createLocaleMiddleware from 'express-locale';
 import logger from 'morgan';
 // import favicon from 'serve-favicon';
 import path from 'path';
@@ -30,6 +31,7 @@ app.use(sassMiddleware({
   indentedSyntax: true,
   sourceMap: true
 }));
+app.use(createLocaleMiddleware());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
